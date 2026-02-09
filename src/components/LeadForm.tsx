@@ -37,8 +37,8 @@ const INDUSTRIES = [
 const COMPANY_SIZES = ["1-10", "11-50", "51-200", "201-500", "500+"];
 
 const REVENUE_RANGES = [
-  "Under $10K", "$10K - $50K", "$50K - $100K",
-  "$100K - $500K", "$500K - $1M", "$1M+", "Prefer not to say",
+  "Under ₹1 Lakh", "₹1 Lakh - ₹5 Lakh", "₹5 Lakh - ₹10 Lakh",
+  "₹10 Lakh - ₹50 Lakh", "₹50 Lakh - ₹1 Crore", "₹1 Crore+", "Prefer not to say",
 ];
 
 const BUSINESS_PROBLEMS = [
@@ -154,21 +154,21 @@ const LeadForm = () => {
         <div className="grid sm:grid-cols-2 gap-6">
           <div className={fieldClass}>
             <Label htmlFor="full_name">Full Name *</Label>
-            <Input id="full_name" value={form.full_name} onChange={(e) => updateField("full_name", e.target.value)} placeholder="John Doe" />
+            <Input id="full_name" value={form.full_name} onChange={(e) => updateField("full_name", e.target.value)} placeholder="Rahul Sharma" />
             {errors.full_name && <p className={errorClass}>{errors.full_name}</p>}
           </div>
           <div className={fieldClass}>
             <Label htmlFor="email">Email *</Label>
-            <Input id="email" type="email" value={form.email} onChange={(e) => updateField("email", e.target.value)} placeholder="john@company.com" />
+            <Input id="email" type="email" value={form.email} onChange={(e) => updateField("email", e.target.value)} placeholder="rahul@company.in" />
             {errors.email && <p className={errorClass}>{errors.email}</p>}
           </div>
           <div className={fieldClass}>
             <Label htmlFor="phone">Phone / WhatsApp</Label>
-            <Input id="phone" value={form.phone} onChange={(e) => updateField("phone", e.target.value)} placeholder="+1 234 567 8900" />
+            <Input id="phone" value={form.phone} onChange={(e) => updateField("phone", e.target.value)} placeholder="+91 98765 43210" />
           </div>
           <div className={fieldClass}>
             <Label htmlFor="preferred_time">Preferred Discussion Time</Label>
-            <Input id="preferred_time" value={form.preferred_time} onChange={(e) => updateField("preferred_time", e.target.value)} placeholder="e.g. Weekdays 2-5 PM EST" />
+            <Input id="preferred_time" value={form.preferred_time} onChange={(e) => updateField("preferred_time", e.target.value)} placeholder="e.g. Weekdays 2-5 PM IST" />
           </div>
         </div>
       </section>
@@ -179,12 +179,12 @@ const LeadForm = () => {
         <div className="grid sm:grid-cols-2 gap-6">
           <div className={fieldClass}>
             <Label htmlFor="company_name">Company Name *</Label>
-            <Input id="company_name" value={form.company_name} onChange={(e) => updateField("company_name", e.target.value)} placeholder="Acme Inc." />
+            <Input id="company_name" value={form.company_name} onChange={(e) => updateField("company_name", e.target.value)} placeholder="Sharma Enterprises Pvt. Ltd." />
             {errors.company_name && <p className={errorClass}>{errors.company_name}</p>}
           </div>
           <div className={fieldClass}>
             <Label htmlFor="website">Website</Label>
-            <Input id="website" value={form.website} onChange={(e) => updateField("website", e.target.value)} placeholder="https://company.com" />
+            <Input id="website" value={form.website} onChange={(e) => updateField("website", e.target.value)} placeholder="https://company.in" />
           </div>
           <div className={fieldClass}>
             <Label>Industry</Label>
@@ -237,7 +237,7 @@ const LeadForm = () => {
 
         <div className={fieldClass}>
           <Label htmlFor="tools">Tools/Software Currently Used</Label>
-          <Textarea id="tools" value={form.tools_software} onChange={(e) => updateField("tools_software", e.target.value)} placeholder="e.g. Salesforce, QuickBooks, Slack..." rows={3} />
+          <Textarea id="tools" value={form.tools_software} onChange={(e) => updateField("tools_software", e.target.value)} placeholder="e.g. Tally, Zoho, WhatsApp Business, Slack..." rows={3} />
         </div>
 
         <div className="grid sm:grid-cols-2 gap-6">
